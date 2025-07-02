@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONO | Minimalist Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#666666',
+                        accent: '#007AFF',
+                        neutral: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.8s ease-in-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 0.8s ease-out forwards;
+            }
+            .grid-masonry {
+                grid-template-rows: masonry;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-primary antialiased">
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight">MONO</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Work</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Services</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full border-t border-gray-100 py-4 animate-fade-in">
+            <div class="container mx-auto px-6 flex flex-col space-y-4">
+                <a href="#work" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Work</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">About</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Services</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-accent transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 py-24 md:py-0">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-light leading-tight mb-8 animate-fade-in opacity-0" style="animation-delay: 0.2s">
+                    Minimalist <span class="font-medium">Design</span> Works
+                </h1>
+                <p class="text-[clamp(1rem,3vw,1.25rem)] text-secondary max-w-2xl mx-auto mb-12 text-balance animate-fade-in opacity-0" style="animation-delay: 0.4s">
+                    Creating timeless digital experiences through simplicity, functionality, and intentional design.
+                </p>
+                <a href="#work" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 animate-fade-in opacity-0" style="animation-delay: 0.6s">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#work" class="text-primary">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-24 bg-neutral">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">Selected Work</h2>
+                <p class="text-secondary max-w-2xl mx-auto">A curated selection of our most impactful design projects, showcasing our approach to minimalist aesthetics and functional solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up">
+                    <img src="https://picsum.photos/id/1015/800/1000" alt="Architecture Website" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">Architecto</h3>
+                            <p class="text-white/80 text-sm">Website Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://picsum.photos/id/1025/800/1000" alt="Furniture Brand" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">Natura</h3>
+                            <p class="text-white/80 text-sm">Brand Identity</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://picsum.photos/id/1060/800/1000" alt="Photography Portfolio" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">Moments</h3>
+                            <p class="text-white/80 text-sm">Photography Portfolio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up">
+                    <img src="https://picsum.photos/id/1073/800/1000" alt="Watch Brand" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">Chronos</h3>
+                            <p class="text-white/80 text-sm">Product Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://picsum.photos/id/1082/800/1000" alt="Cafe Brand" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">Artisan</h3>
+                            <p class="text-white/80 text-sm">Brand & Packaging</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://picsum.photos/id/1083/800/1000" alt="Fitness App" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-white text-xl font-medium mb-2">FitLife</h3>
+                            <p class="text-white/80 text-sm">Mobile App Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-6">About MONO</h2>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        MONO is a minimalist design studio focused on creating meaningful digital experiences through simplicity, functionality, and intentional design. Founded in 2015, we bring together a team of passionate designers and developers who share a common vision: to strip away the unnecessary and focus on what truly matters.
+                    </p>
+                    <p class="text-secondary mb-8 leading-relaxed">
+                        Our approach combines clean aesthetics with thoughtful functionality, resulting in designs that are not only beautiful but also effective. We believe that great design should be invisible – it should serve the user and the message, not draw attention to itself.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-xl font-medium mb-4">Our Approach</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                We start by understanding your goals, audience, and message. From there, we create designs that are both visually stunning and strategically sound.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-4">Our Values</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                Simplicity, functionality, sustainability, and accessibility guide everything we do. We believe design should make life better for everyone.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block border-2 border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://picsum.photos/id/1019/800/1000" alt="Design Studio" class="w-full h-[700px] object-cover">
+                        <div class="absolute -bottom-8 -left-8 bg-white p-8 shadow-xl">
+                            <p class="text-sm text-secondary mb-2">Years of Experience</p>
+                            <p class="text-4xl font-bold">10+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-neutral">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">Our Services</h2>
+                <p class="text-secondary max-w-2xl mx-auto">We offer a comprehensive range of design services tailored to meet your specific needs and goals.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Brand Identity</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        We create cohesive brand identities that resonate with your audience and stand out in the market. From logos to color palettes and typography systems.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Web Design</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        Crafting beautiful, functional websites that provide exceptional user experiences and drive results. From concept to implementation.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Mobile App Design</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        Designing intuitive and engaging mobile experiences that users love. We focus on usability and aesthetics to create apps that perform.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-package"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Packaging Design</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        Creating packaging solutions that not only protect your product but also communicate your brand story and values effectively.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Photography</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        Capturing stunning visuals that complement your brand and products. From product photography to lifestyle shoots.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-accent text-3xl mb-6">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">UX/UI Design</h3>
+                    <p class="text-secondary text-sm leading-relaxed">
+                        Creating user-centered designs that prioritize usability, accessibility, and delight. We focus on solving real problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-4">Client Testimonials</h2>
+                <p class="text-secondary max-w-2xl mx-auto">Don't just take our word for it. Here's what our clients have to say about working with us.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-neutral p-8">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "MONO transformed our brand identity with their minimalist approach. The result is clean, modern, and perfectly captures what we stand for. Their attention to detail is remarkable."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1001/100/100" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">Sarah Johnson</h4>
+                            <p class="text-secondary text-sm">CEO, DesignMatic</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-neutral p-8">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "Working with MONO was a dream. They took our complex ideas and transformed them into a beautiful, easy-to-use website. The process was smooth and the results exceeded our expectations."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1002/100/100" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">Michael Chen</h4>
+                            <p class="text-secondary text-sm">Founder, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-neutral p-8">
+                    <div class="text-accent mb-6">
+                        <i class="fa-solid fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-secondary italic mb-6 leading-relaxed">
+                        "The packaging design MONO created for our product line has significantly increased our shelf presence. Their ability to balance aesthetics with functionality is impressive."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1003/100/100" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-medium">Emma Rodriguez</h4>
+                            <p class="text-secondary text-sm">Creative Director, Artisan Brands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-light mb-6">Get in Touch</h2>
+                    <p class="text-white/80 mb-8 leading-relaxed">
+                        Interested in working together? Fill out the form and we'll get back to you as soon as possible.
+                    </p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your email">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-white/10 border border-white/20 rounded px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-white text-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-white/5 p-8 h-full">
+                        <h3 class="text-xl font-medium mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-map-marker"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Location</h4>
+                                    <p class="text-white/80">123 Design Street, Minimalist City, CA 90210, United States</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Email</h4>
+                                    <p class="text-white/80">hello@monodesign.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent text-xl mr-4 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Phone</h4>
+                                    <p class="text-white/80">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h3 class="text-xl font-medium mb-6">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-behance"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-primary text-white/80 border-t border-white/10">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-6">MONO</h3>
+                    <p class="text-sm leading-relaxed">
+                        Creating minimalist design solutions that make a meaningful impact.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#work" class="hover:text-accent transition-colors">Work</a></li>
+                        <li><a href="#about" class="hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-accent transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-accent transition-colors">Brand Identity</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Web Design</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Mobile App Design</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Packaging Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Newsletter</h4>
+                    <p class="text-sm mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-white/10 border border-white/20 rounded-l px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent w-full">
+                        <button type="submit" class="bg-accent text-white px-4 py-2 rounded-r hover:bg-white hover:text-primary transition-all duration-300">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">© 2025 MONO Design Studio. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll animation for elements
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('[data-aos]');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight * 0.85) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        
+        // Initial check on page load
+        window.addEventListener('load', animateOnScroll);
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
+    
